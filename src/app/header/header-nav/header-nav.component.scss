@@ -1,0 +1,83 @@
+.dropdown:hover .dropdown-menu {
+    display: block; // Show the dropdown menu on hover
+}
+/* src/styles.scss or src/app/components/header/header.component.scss */
+.sticky-navbar {
+    position: -webkit-sticky;  /* For Safari */
+    position: sticky;
+    top: 0;  /* Sticky from the top */
+    z-index: 1030; /* Ensure the navbar is above other elements */
+    background-color: white; /* Optional: Ensure the background is solid */
+    box-shadow: 0 4px 2px -2px gray; /* Optional: Add shadow for effect */
+}
+
+/* Prevent "Products" button from changing appearance on hover */
+.nav-item.dropdown > .nav-link.dropdown-toggle {
+  color: #333; /* Default text color */
+  background-color: transparent; /* No background */
+  border: none; /* Remove border */
+  transition: none; /* Remove hover transition */
+  text-decoration: none !important; /* Explicitly remove underline */
+}
+
+.nav-item.dropdown > .nav-link.dropdown-toggle:hover {
+  color: #333; /* Keep default text color on hover */
+  background-color: transparent; /* No background change */
+  cursor: default; /* Default pointer */
+}
+
+/* Dropdown menu styling */
+.nav-item.dropdown .dropdown-menu {
+  display: none; /* Hide menu by default */
+  position: absolute;
+  top: 100%; /* Place below the "Products" button */
+  left: 0;
+  z-index: 1000;
+  background-color: #fff; /* White background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 0; /* Reset padding for cleaner spacing */
+}
+
+/* Show dropdown menu on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown item styling (section names) */
+.dropdown-item {
+  color: #333; /* Default text color */
+  padding: 12px 16px; /* Add padding for better spacing */
+  font-size: 16px; /* Larger, readable font size */
+  font-weight: 500; /* Medium weight for better readability */
+  text-decoration: none !important; /* Remove underline explicitly */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for dropdown items (section names) */
+.dropdown-item:hover {
+  background-color: #d6d8db; /* Darker gray background */
+  color: #007bff; /* Blue text color */
+  text-decoration: none !important; /* Ensure no underline */
+}
+
+/* Remove bottom border for the last dropdown item */
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+
+
+ 
+
+
+  
+  
+  
+  

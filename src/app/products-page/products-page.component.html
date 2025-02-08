@@ -1,0 +1,39 @@
+<div *ngIf="product$ | async as product; else loading" class="container-fluid py-5">
+  <div class="container">
+    <div class="row gx-5">
+
+      <!-- Image Section -->
+      <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute w-100 h-100 rounded"
+            [src]="product.imageUrl"
+            [alt]="product.name"
+            style="object-fit: cover;"
+          />
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="col-lg-7">
+        <div class="mb-4">
+          <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">
+            Product Details
+          </h5>
+          <h1 class="display-4 mb-4">
+            {{ product.name }}
+          </h1>
+
+          <p class="fs-6" [innerHTML]="product.description"></p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Loading State -->
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
